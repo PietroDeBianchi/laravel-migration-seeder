@@ -21,6 +21,7 @@ class TrainsTableSeeder extends Seeder
             $train = new Train();
 
             $train->Company = $faker->word();
+            $train->Date = $faker->date();
             $train->Departures_station = $faker->city();
             $train->Arrivals_station = $faker->city();
             $train->Departures_time = $faker->time("H:i");
@@ -30,8 +31,6 @@ class TrainsTableSeeder extends Seeder
             $train->Wagon_numbers = $faker->numberBetween(1, 30);
             $train->Time_lag = $faker->boolean();
             $train->Deleted = $faker->boolean();
-
-
 
             $train->save();
         }
